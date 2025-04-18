@@ -1,21 +1,28 @@
 # Prefix File Renamer
 
-Một ứng dụng đơn giản với giao diện đồ họa giúp đổi tên hàng loạt các file trong một thư mục bằng cách thêm tiền tố (prefix) vào đầu tên file.
+Một ứng dụng với giao diện đồ họa hiện đại giúp đổi tên hàng loạt các file trong một thư mục bằng cách thêm tiền tố (prefix) vào đầu tên file.
 
-## Tính năng
+![App Screenshot](screenshots/app_screenshot.png)
 
-- Giao diện đồ họa người dùng dễ sử dụng
-- Đổi tên file hàng loạt với prefix được chỉ định
-- Tự động bỏ qua các file đã có prefix
-- Hiển thị tiến trình đổi tên
-- Hiển thị chi tiết về các file được xử lý (tên trước và sau khi đổi)
-- Theo dõi số lượng file đã xử lý, đã đổi tên và đã bỏ qua
+## Tính năng chính
+
+- **Giao diện người dùng thân thiện** với biểu tượng trực quan
+- **Hiển thị kết quả dạng bảng** với mã màu trực quan để dễ theo dõi
+- **Lưu trữ và gợi ý các prefix đã sử dụng** để tiết kiệm thời gian
+- **Chế độ xem trước** kết quả trước khi thực hiện thay đổi thật
+- **Tạo nhật ký (log)** chi tiết của quá trình đổi tên
+- **Tiến trình trực quan** để theo dõi quá trình xử lý
+- **Chức năng trợ giúp** tích hợp sẵn
+
+## Màn hình ứng dụng
+
+![Features Overview](screenshots/features_overview.png)
 
 ## Cài đặt
 
 ### Yêu cầu
-- Python 3.6 trở lên
-- Tkinter (thường đã được cài đặt sẵn với Python)
+- Python 3.6 hoặc mới hơn
+- Tkinter (thường đã được cài đặt với Python)
 
 ### Cách cài đặt
 
@@ -34,17 +41,29 @@ cd prefix-file-renamer
 python prefix_renamer_gui.py
 ```
 
-## Cách sử dụng
+## Hướng dẫn sử dụng
 
-1. Khởi động ứng dụng
-2. Nhấn nút "Duyệt..." để chọn thư mục chứa các file cần đổi tên
-3. Nhập prefix (tiền tố) mà bạn muốn thêm vào đầu tên các file
-4. Nhấn nút "Đổi tên files" để bắt đầu quá trình
-5. Theo dõi tiến trình và kết quả trong khu vực log
+### Các bước cơ bản
 
-## Screenshots
+1. **Chọn thư mục chứa file cần đổi tên**
+   - Nhấn nút "Duyệt..." để mở hộp thoại chọn thư mục
+   - Hoặc nhập trực tiếp đường dẫn vào ô nhập liệu
 
-![App Screenshot](screenshots/app_screenshot.png)
+2. **Chọn hoặc nhập prefix**
+   - Nhập prefix mới vào ô nhập liệu
+   - Hoặc chọn một prefix đã sử dụng trước đó từ danh sách
+   - Nhấn "Lưu prefix" để thêm prefix hiện tại vào danh sách để sử dụng sau này
+
+3. **Xem trước hoặc thực hiện**
+   - Tích vào "Xem trước" để kiểm tra các thay đổi trước khi áp dụng
+   - Nhấn "Bắt đầu đổi tên" để tiến hành quá trình đổi tên
+
+### Hiểu kết quả hiển thị
+
+Kết quả được hiển thị dưới dạng bảng với các mã màu:
+- **Xanh lá**: File đã được đổi tên thành công
+- **Vàng**: File đã bị bỏ qua (đã có prefix)
+- **Đỏ**: Đã xảy ra lỗi khi đổi tên file
 
 ## Đóng góp
 
