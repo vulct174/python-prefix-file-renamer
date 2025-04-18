@@ -2,7 +2,7 @@
 
 Một ứng dụng với giao diện đồ họa hiện đại giúp đổi tên hàng loạt các file trong một thư mục bằng cách thêm tiền tố (prefix) vào đầu tên file.
 
-![App Screenshot](screenshots/app_screenshot.png)
+![App Screenshot](assets/logo.png)
 
 ## Tính năng chính
 

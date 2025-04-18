@@ -6,10 +6,12 @@ import webbrowser
 from datetime import datetime
 from tkinter import filedialog, ttk
 from tkinter import messagebox
-
+from tkinter import PhotoImage
+from PIL import Image, ImageTk
 
 class PrefixRenamerApp:
     def __init__(self, root):
+        self.logo_image = None
         self.root = root
         self.root.title("Prefix File Renamer")
         self.root.geometry("900x650")
@@ -81,9 +83,19 @@ class PrefixRenamerApp:
         header_frame = ttk.Frame(main_frame)
         header_frame.pack(fill="x", pady=(0, 10))
 
+        # Load và resize logo
+        original_logo = Image.open("assets/logo.png")
+        resized_logo = original_logo.resize((40, 40), Image.Resampling.LANCZOS)  # dùng LANCZOS để thay cho ANTIALIAS
+        self.logo_image = ImageTk.PhotoImage(resized_logo)
+
+        # Hiển thị
+        logo_label = tk.Label(header_frame, image=self.logo_image, background=self.bg_color)
+        logo_label.pack(side="left", padx=(0, 10))
+
+        # Tiêu đề
         title_label = ttk.Label(header_frame, text="Prefix File Renamer", style="Header.TLabel",
                                 font=('Arial', 16, 'bold'))
-        title_label.pack(side="left", padx=5)
+        title_label.pack(side="left")
 
         github_button = ttk.Button(header_frame, text=f"{self.icons['github']} GitHub", command=self.open_github)
         github_button.pack(side="right", padx=5)
